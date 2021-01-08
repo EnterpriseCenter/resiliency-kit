@@ -1,0 +1,111 @@
+{
+    "Main" : {
+      "globals" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Globals"
+        }
+      },
+      "about_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "About Button Text"
+        }
+      },
+      "button_cta" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Button Call to Action"
+        }
+      },
+      "button_cta_returning_users" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Button Call to Action (Returning Users)"
+        }
+      },
+      "footer_content" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, strong, em, hyperlink",
+          "allowTargetBlank" : true,
+          "label" : "Footer Content"
+        }
+      },
+      "form_continue_button" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Form Continue Button"
+        }
+      },
+      "form_skip_button" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Form Skip Button"
+        }
+      },
+      "form_submit_button" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Form Submit Button"
+        }
+      },
+      "help_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Help Button Text"
+        }
+      },
+      "help_content_step_1_headline" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Help Content Step 1 Headline"
+        }
+      },
+      "help_content_step_1" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, strong",
+          "label" : "Help Content Step 1"
+        }
+      },
+      "help_content_step_1_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Help Content Step 1 Button Text"
+        }
+      },
+      "help_content_step_2" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, heading4, strong, em, hyperlink",
+          "label" : "Help Content Step 2"
+        }
+      },
+      "help_content_step_2_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Help Content Step 2 Button Text"
+        }
+      },
+      "help_drawer_collapse_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Help Drawer Collapse Text (Screenreader Only)"
+        }
+      }
+    },
+    "SEO" : {
+      "default_open_graph_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : 1200,
+            "height" : 630
+          },
+          "thumbnails" : [ ],
+          "label" : "Default Open Graph Image"
+        }
+      }
+    }
+  }

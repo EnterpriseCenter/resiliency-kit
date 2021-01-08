@@ -1,0 +1,50 @@
+{
+    "Main" : {
+      "page_heading" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Page Heading"
+        }
+      },
+      "page_content" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, list-item, o-list-item",
+          "allowTargetBlank" : true,
+          "label" : "Page Content"
+        }
+      }
+    },
+    "SEO" : {
+      "page_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Page Title"
+        }
+      },
+      "meta_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Meta Title"
+        }
+      },
+      "meta_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Meta Description"
+        }
+      },
+      "open_graph_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : 1200,
+            "height" : 630
+          },
+          "thumbnails" : [ ],
+          "label" : "Open Graph Image"
+        }
+      }
+    }
+  }

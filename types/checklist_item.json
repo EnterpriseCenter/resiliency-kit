@@ -1,0 +1,106 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Title"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink, list-item, o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "Description"
+      }
+    },
+    "related_resources" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "resource_type" : {
+            "type" : "Select",
+            "config" : {
+              "options" : [ "Link", "Template", "Video" ],
+              "label" : "Resource Type"
+            }
+          },
+          "resource_name" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Resource Name"
+            }
+          },
+          "url" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "URL",
+              "placeholder" : "Enter a valid url, including https://"
+            }
+          }
+        },
+        "label" : "Related Resources"
+      }
+    }
+  },
+  "Filters" : {
+    "applies_to_all" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Applies to All"
+      }
+    },
+    "business_type" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "answer" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "answer" ],
+              "tags" : [ "Business Type" ],
+              "label" : "Answer"
+            }
+          }
+        },
+        "label" : "Business Type"
+      }
+    },
+    "employees" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "answer" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "answer" ],
+              "tags" : [ "Employees" ],
+              "label" : "Answer"
+            }
+          }
+        },
+        "label" : "Employees"
+      }
+    },
+    "sectors" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "answer" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "answer" ],
+              "tags" : [ "Sector" ],
+              "label" : "Answer"
+            }
+          }
+        },
+        "label" : "Sectors"
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+module.exports = {
+    purge: ['./pages/**/*.js', './components/**/*.js', './lib/**/*.js'],
+    theme: {
+        extend: {},
+        screens: {
+            xs: '480px',
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            print: { raw: 'print' },
+        },
+        colors: {
+            blue: {
+                50: '#EFF6FF',
+                100: '#e5e6fb',
+                200: '#babdf2',
+                300: '#6367c1',
+                400: '#40458e',
+                500: '#272a64',
+                600: '#1C204A',
+            },
+            orange: {
+                100: '#fceae5',
+                200: '#eeb5a8',
+                300: '#e9745b',
+                400: '#ac2509',
+                500: '#8f1f07',
+            },
+            gray: {
+                100: '#FAFAFA',
+                150: '#F7F7F7',
+                200: '#F0F0F0',
+                300: '#E4E4E4',
+                400: '#CFCFCF',
+                500: '#BBBBBB',
+                600: '#A1A1A1',
+                700: '#646464',
+                800: '#404040',
+                900: '#222222',
+            },
+            white: '#FFFFFF',
+            black: '#000000',
+        },
+    },
+    variants: {},
+    plugins: [],
+}

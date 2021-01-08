@@ -1,0 +1,45 @@
+{
+    "Main" : {
+      "name" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Name"
+        }
+      },
+      "title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Title"
+        }
+      },
+      "business_name" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Business Name"
+        }
+      },
+      "link_to_business_website" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Link to Business Website"
+        }
+      },
+      "location" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Location"
+        }
+      },
+      "photo" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : 700,
+            "height" : 700
+          },
+          "thumbnails" : [ ],
+          "label" : "Photo"
+        }
+      }
+    }
+  }

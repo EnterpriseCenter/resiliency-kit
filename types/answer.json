@@ -1,0 +1,16 @@
+{
+    "Main" : {
+      "answer_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Answer Title"
+        }
+      },
+      "answer_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Answer Description"
+        }
+      }
+    }
+  }

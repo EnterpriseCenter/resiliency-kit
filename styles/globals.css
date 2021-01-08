@@ -1,0 +1,391 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://use.typekit.net/shg3dqr.css");
+
+@layer base {
+
+    html {
+      min-height: 100vh;
+    }
+
+    body {
+      @apply text-gray-900 overflow-x-hidden bg-gray-100;
+      height: 100%;
+      font-family: 'proxima-nova', system-ui, sans-serif;
+    }
+
+    @media print {
+      body {
+        @apply bg-white text-black;
+      }
+    }
+
+    #__next {
+      height: 100%;
+    }
+
+    p {
+      @apply text-lg;
+    }
+
+    p + p {
+      @apply mt-4;
+    }
+
+    p + h2,
+    p + .h2 {
+      @apply mt-4;
+    }
+}
+
+@layer components {
+
+  .blob {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    background: url(/white-circle-h.svg) top center no-repeat #EF6C59;
+    background-size: 100% auto;
+    box-shadow: inset 0 1px 0 #fafafa;
+  }
+
+  @screen md {
+    .blob {
+      width: 25vw;
+      height: 100vh;
+      position: fixed;
+      bottom: auto;
+      left: auto;
+      top: 0;
+      right: 0;
+      background: url(/white-circle-v.svg) left center no-repeat #EF6C59;
+      background-size: auto 100%;
+      box-shadow: inset 1px 0 0 #fafafa;
+    }
+  }
+
+  @screen lg {
+    .blob {
+      width: 40vw;
+    }
+  }
+
+  .container {
+    @apply w-full max-w-screen-xl mx-auto px-6;
+  }
+
+  h1, .h1 {
+    @apply text-2xl font-bold leading-tight;
+  }
+
+  @screen sm {
+    h1, .h1 {
+      @apply text-3xl
+    }
+  }
+
+  @screen md {
+    h1, .h1 {
+      @apply text-4xl;
+    }
+  }
+
+  @screen lg {
+    h1, .h1 {
+      @apply text-4xl;
+    }
+  }
+
+  h2, .h2 {
+    @apply text-2xl font-bold;
+  }
+
+  @screen lg {
+    h2, .h2 {
+      @apply text-3xl;
+    }
+  }
+
+  h3, .h3 {
+    @apply text-xl font-bold leading-tight;
+  }
+
+  @screen lg {
+    h3, .h3 {
+      @apply text-2xl;
+    }
+  }
+
+  .rich-text h3 {
+    @apply mb-2
+  }
+
+  .rich-text a {
+    @apply text-blue-400 underline;
+  }
+
+  .rich-text a:hover {
+    @apply text-blue-300;
+  }
+
+  .btn {
+    @apply font-bold py-4 px-8 rounded-md inline-block cursor-pointer;
+  }
+
+  .btn-small {
+    @apply py-3 px-6
+  }
+
+  .btn-blue {
+    @apply bg-blue-400 text-white;
+  }
+
+  .btn-blue:hover {
+    @apply bg-blue-500;
+  }
+
+  .btn-ghost {
+    @apply text-blue-400
+  }
+
+  .btn-ghost:hover {
+    @apply text-blue-500 bg-gray-200
+  }
+
+  .btn-text {
+    @apply text-blue-400 underline
+  }
+
+  .btn-text:hover {
+    @apply text-blue-500;
+  }
+
+  .btn-gray {
+    @apply bg-gray-200;
+  }
+
+  .btn-gray:hover,
+  .btn-gray:focus {
+    @apply bg-gray-400
+  }
+
+  .btn-orange {
+    @apply bg-orange-400 text-white;
+  }
+
+  .btn-orange:hover,
+  .btn-orange:focus {
+    @apply bg-orange-500;
+  }
+
+  .form input[type="radio"]:checked + label {
+    @apply bg-blue-100 border border-blue-400;
+  }
+
+  .form input[type="radio"]:checked + label .custom-form-radio-button {
+    @apply relative;
+  }
+
+  .form input[type="radio"]:checked + label .custom-form-radio-button:after {
+    content: '';
+    @apply absolute top-0 left-0 bottom-0 right-0 rounded-full bg-blue-400 border-white border-4;
+  }
+
+  .form input[type="radio"]:focus + label {
+    @apply shadow-outline;
+  }
+
+  .form input[type="checkbox"]:checked + label {
+    @apply bg-blue-100 border border-blue-400;
+  }
+
+  .form input[type="checkbox"]:checked + label .custom-form-checkbox {
+    @apply relative;
+  }
+
+  .form input[type="checkbox"]:checked + label .custom-form-checkbox:after {
+    content: '';
+    @apply absolute top-0 left-0 bottom-0 right-0 bg-blue-400 border-white border-4;
+  }
+
+  .form input[type="checkbox"]:focus + label {
+    @apply shadow-outline;
+  }
+
+  .checklist-item {
+    page-break-inside: avoid;
+  }
+
+  .custom-checkbox-control:checked ~ label {
+    @apply opacity-25
+  }
+  .custom-checkbox-control:checked ~ .checklist-item-description {
+    @apply opacity-25
+  }
+
+  .custom-checkbox-control ~ .custom-checkbox {
+    @apply bg-none;
+  }
+
+  .custom-checkbox-control:hover ~ .custom-checkbox {
+    @apply bg-gray-200;
+    background-image: url(../public/check.svg);
+    background-size: 15px 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .custom-checkbox-control:checked ~ .custom-checkbox {
+    @apply bg-gray-600 border-gray-600;
+    background-image: url(../public/check.svg);
+    background-size: 15px 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .custom-checkbox-control:focus ~ .custom-checkbox {
+    @apply shadow-outline
+  }
+
+  @media print {
+    .custom-checkbox-control:checked ~ .custom-checkbox {
+      @apply border-gray-600
+    }
+    .custom-checkbox-control:checked ~ .custom-checkbox:before {
+      content: '✓';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      font-size: 13px
+    }
+  }
+
+  .checklist-item-description p {
+    @apply text-base;
+  }
+
+  .help-text-step-2 h4 {
+    @apply text-xl mt-4 mb-2;
+  }
+
+  .help-text-step-2 a {
+    @apply underline cursor-pointer;
+  }
+
+  .help-text-step-2 a:hover {
+    @apply opacity-75;
+  }
+
+  .footer_content p {
+    @apply text-sm text-white
+  }
+  .footer_content p a {
+    @apply underline cursor-pointer
+  }
+
+  .footer_content p a:hover {
+    @apply opacity-50;
+  }
+
+  @screen sm {
+    .footer_content p {
+      @apply text-base;
+    }
+  }
+
+  @screen md {
+    .footer_content p {
+      @apply text-gray-700;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: auto;
+    bottom: calc(0px - 1rem);
+    background: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    transform: translateX(-50%) translateY(50%);
+    box-shadow: 0 5px 25px rgba(0,0,0,.2);
+    z-index: 800;
+  }
+
+  @screen lg {
+    .slick-prev,
+    .slick-next {
+      bottom: calc(0px - 2rem);
+    }
+  }
+
+  .slick-prev:hover,
+  .slick-next:hover,
+  .slick-prev:focus,
+  .slick-next:focus {
+    background: #FFFFFF;
+  }
+
+  .slick-prev:hover,
+  .slick-next:hover{
+    transform: translateX(-50%) translateY(50%) scale(1.05);
+  }
+
+  .slick-prev:active,
+  .slick-next:active{
+    transition: all .1s;
+    transform: translateX(-50%) translateY(50%) scale(0.95);
+  }
+
+  .slick-prev:hover:before,
+  .slick-next:hover:before,
+  .slick-prev:focus:before,
+  .slick-next:focus:before {
+    border-color: #808080;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    content: '';
+    border-color: #404040;
+    border-style: solid;
+    border-width: 0.125em 0.125em 0 0;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    opacity: 1;
+    position: relative;
+  }
+
+  .slick-prev {
+    left: calc(50% - 30px);
+  }
+
+  .slick-prev:before {
+    transform: rotate(-135deg);
+    right: -2px;
+  }
+
+  .slick-next {
+    left: calc(50% + 30px);
+  }
+
+  .slick-next:before {
+    transform: rotate(45deg);
+    left: -2px;
+  }
+
+}
+
+@media all and (-ms-high-contrast:none) {
+  .blob {
+    background: #EF6C59;
+  }
+}

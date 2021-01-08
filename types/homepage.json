@@ -1,0 +1,54 @@
+{
+    "Main" : {
+      "heading" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1, heading2, heading3, heading4",
+          "label" : "Heading"
+        }
+      },
+      "time_promise" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Time Promise"
+        }
+      },
+      "data_security_promise" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Data Security Promise"
+        }
+      }
+    },
+    "SEO" : {
+      "page_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Page Title"
+        }
+      },
+      "meta_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Meta Title"
+        }
+      },
+      "meta_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Meta Description"
+        }
+      },
+      "open_graph_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : 1200,
+            "height" : 630
+          },
+          "thumbnails" : [ ],
+          "label" : "Open Graph Image"
+        }
+      }
+    }
+  }

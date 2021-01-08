@@ -1,0 +1,71 @@
+{
+    "Main" : {
+      "question" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Question"
+        }
+      },
+      "question_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Question Description",
+          "placeholder" : "Optional"
+        }
+      },
+      "answers" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "answer" : {
+              "type" : "Link",
+              "config" : {
+                "select" : "document",
+                "customtypes" : [ "answer" ],
+                "label" : "Answer"
+              }
+            }
+          },
+          "label" : "Answers"
+        }
+      },
+      "question_type" : {
+        "type" : "Select",
+        "config" : {
+          "options" : [ "Single select", "Multi select" ],
+          "default_value" : "Single select",
+          "label" : "Question Type"
+        }
+      },
+      "submit_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Submit Button Text"
+        }
+      },
+      "submit_button_text_alt" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Submit Button Text Alt"
+        }
+      },
+      "skip_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Skip Button Text"
+        }
+      },
+      "order" : {
+        "type" : "Number",
+        "config" : {
+          "label" : "Order"
+        }
+      },
+      "question_identifier" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Question Identifier"
+        }
+      }
+    }
+  }

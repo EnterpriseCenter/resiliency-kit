@@ -1,0 +1,185 @@
+{
+    "Main" : {
+      "page_headline" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Page Headline"
+        }
+      },
+      "intro" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Intro"
+        }
+      },
+      "actions_menu_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Actions Menu Button Text"
+        }
+      },
+      "action_item__print" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Action Item: Print"
+        }
+      },
+      "action_item__uncheck_all" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Action Item: Uncheck All"
+        }
+      },
+      "action_item__change_answers" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Action Item: Change Answers"
+        }
+      },
+      "action_item__start_over" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Action Item: Start Over"
+        }
+      },
+      "skip_form_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Skip Form Text"
+        }
+      },
+      "confirmation_cancel_button_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Confirmation Cancel Button Text"
+        }
+      },
+      "uncheck_all_confirmation_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Uncheck All Confirmation Title"
+        }
+      },
+      "uncheck_all_confirmation_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Uncheck All Confirmation Text"
+        }
+      },
+      "change_answers_confirmation_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Change Answers Confirmation Title"
+        }
+      },
+      "change_answers_confirmation_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Change Answers Confirmation Text"
+        }
+      },
+      "start_over_confirmation_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Start Over Confirmation Title"
+        }
+      },
+      "start_over_confirmation_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Start Over Confirmation Text"
+        }
+      },
+      "pre_checklist_content" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, heading2, heading3, heading4, heading5, heading6, strong, em",
+          "label" : "Pre Checklist Content"
+        }
+      },
+      "end_of_checklist_content" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, list-item, o-list-item",
+          "allowTargetBlank" : true,
+          "label" : "End of Checklist Content"
+        }
+      },
+      "enable_print_button_in_footer" : {
+        "type" : "Boolean",
+        "config" : {
+          "default_value" : true,
+          "label" : "Enable Print Button in Footer"
+        }
+      }
+    },
+    "Checklist" : {
+      "body" : {
+        "type" : "Slices",
+        "fieldset" : "Slice zone",
+        "config" : {
+          "labels" : {
+            "category" : [ ]
+          },
+          "choices" : {
+            "category" : {
+              "type" : "Slice",
+              "fieldset" : "Category",
+              "description" : "category",
+              "icon" : "folder",
+              "display" : "list",
+              "non-repeat" : {
+                "category_name" : {
+                  "type" : "Text",
+                  "config" : {
+                    "label" : "Category Name"
+                  }
+                }
+              },
+              "repeat" : {
+                "checklist_item" : {
+                  "type" : "Link",
+                  "config" : {
+                    "select" : "document",
+                    "customtypes" : [ "checklist_item" ],
+                    "label" : "Checklist Item"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "SEO" : {
+      "page_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Page Title"
+        }
+      },
+      "meta_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Meta Title"
+        }
+      },
+      "meta_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Meta Description"
+        }
+      },
+      "open_graph_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : 1200,
+            "height" : 630
+          },
+          "thumbnails" : [ ],
+          "label" : "Open Graph Image"
+        }
+      }
+    }
+  }
