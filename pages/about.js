@@ -1,7 +1,8 @@
 import { getAbout } from '@/lib/api'
 import Layout from '@/components/global/Layout'
 import Head from 'next/head'
-import { RichText } from 'prismic-reactjs'
+import { PrismicRichText } from '@prismicio/react'
+import { asText } from '@prismicio/client'
 import { linkResolver } from '@/lib/linkResolver'
 
 export default function Index({ doc, globals }) {
@@ -19,11 +20,11 @@ export default function Index({ doc, globals }) {
             <div className="container py-10">
                 <div className="w-full md:w-2/3 lg:w-1/2">
                     <h1 className="h1 mb-4">
-                        {RichText.asText(doc.page_heading)}
+                        {asText(doc.page_heading)}
                     </h1>
                     <div className="rich-text">
-                        <RichText
-                            render={doc.page_content}
+                        <PrismicRichText
+                            field={doc.page_content}
                             linkResolver={linkResolver}
                         />
                     </div>
