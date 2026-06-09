@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Caret from '@/public/caret.svg'
 import Check from '@/public/check-blue.svg'
 import { localeDisplayName } from '@/lib/localeFormat'
-import { setCookie } from 'nookies'
+import { setCookie } from 'cookies-next'
 
 export default function LanguageSwitcher() {
     const [isOpen, setIsOpen] = useState(false)
@@ -126,7 +126,6 @@ export default function LanguageSwitcher() {
                                         }`}
                                         onClick={() =>
                                             setCookie(
-                                                null,
                                                 'NEXT_LOCALE',
                                                 item,
                                                 { path: '/' }

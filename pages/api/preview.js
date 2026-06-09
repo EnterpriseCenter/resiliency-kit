@@ -1,4 +1,8 @@
-import { PrismicClient } from '@/lib/api'
+import { createClient } from '@prismicio/client'
+import { API_TOKEN } from '@/lib/api'
+
+const REPOSITORY = process.env.PRISMIC_REPOSITORY_NAME
+const REF_API_URL = `https://${REPOSITORY}.prismic.io/api/v2`
 
 function linkResolver(doc) {
     // Pretty URLs for known types
@@ -13,11 +17,13 @@ function linkResolver(doc) {
 export default async function preview(req, res) {
     const { token: ref, documentId } = req.query
 
-    // Check the token parameter against the Prismic SDK
-    const url = await PrismicClient.getPreviewResolver(ref, documentId).resolve(
+    const client = createClient(REF_API_URL, { accessToken: API_TOKEN })
+    const url = await client.resolvePreviewURL({
         linkResolver,
-        '/'
-    )
+        defaultURL: '/',
+        previewToken: ref,
+        documentId,
+    })
 
     if (!url) {
         return res.status(401).json({ message: 'Invalid token' })

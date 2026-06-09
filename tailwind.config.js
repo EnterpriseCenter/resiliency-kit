@@ -1,5 +1,5 @@
 module.exports = {
-    purge: ['./pages/**/*.js', './components/**/*.js', './lib/**/*.js'],
+    content: ['./pages/**/*.js', './components/**/*.js', './lib/**/*.js'],
     theme: {
         extend: {},
         screens: {
@@ -43,6 +43,5 @@ module.exports = {
             black: '#000000',
         },
     },
-    variants: {},
     plugins: [],
 }
