@@ -1,4 +1,4 @@
-import { RichText } from 'prismic-reactjs'
+import { PrismicRichText } from '@prismicio/react'
 import useStickyState from '@/lib/useStickyState'
 import React, { useEffect, Fragment } from 'react'
 import HelpIcon from '@/public/help.svg'
@@ -29,8 +29,8 @@ export default function HelpBar({ content, filteredCheckListItems }) {
                                             filteredCheckListItems.length
                                         )}
                                     </h3>
-                                    <RichText
-                                        render={content.help_content_step_1}
+                                    <PrismicRichText
+                                        field={content.help_content_step_1}
                                     />
                                 </div>
                                 <button
@@ -43,8 +43,8 @@ export default function HelpBar({ content, filteredCheckListItems }) {
                         ) : (
                             <Fragment>
                                 <div className="max-w-4xl help-text-step-2">
-                                    <RichText
-                                        render={content.help_content_step_2}
+                                    <PrismicRichText
+                                        field={content.help_content_step_2}
                                     />
                                 </div>
                                 <button

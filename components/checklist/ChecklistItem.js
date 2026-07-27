@@ -1,4 +1,4 @@
-import { RichText } from 'prismic-reactjs'
+import { PrismicRichText } from '@prismicio/react'
 
 export default function ChecklistItem({
     index,
@@ -63,7 +63,7 @@ export default function ChecklistItem({
             </label>
             <div className="border border-gray-600 rounded-full h-6 w-6 ml-5 md:ml-8 custom-checkbox absolute left-0 top-0 mt-4 md:mt-8 pointer-events-none print:mt-2 print:ml-0 print:h-4 print:w-4 print:border-black"></div>
             <div className="checklist-item-description text-gray-700 print:text-black">
-                <RichText render={item.description} />
+                <PrismicRichText field={item.description} />
             </div>
 
             {item.related_resources.length ? (
