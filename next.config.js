@@ -1,4 +1,5 @@
 const path = require('path')
+const { withSentryConfig } = require('@sentry/nextjs/config')
 
 const nextConfig = {
     async redirects() {
@@ -28,4 +29,11 @@ const nextConfig = {
     },
 }
 
-module.exports = nextConfig
+module.exports = withSentryConfig(nextConfig, {
+    silent: true,
+    // Sourcemap upload needs a Sentry auth token + org/project pointed at
+    // the self-hosted GlitchTip instance's own upload API; not wired up
+    // yet, so disable it rather than let the build warn/fail on missing
+    // credentials. Error capture itself doesn't depend on this.
+    sourcemaps: { disable: true },
+})
